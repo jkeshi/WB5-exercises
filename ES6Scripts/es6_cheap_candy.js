@@ -11,12 +11,28 @@ let products = [
   // price ranges
 ];
 
-let cheaperProducts = 
-products.filter((product) => product.price < 4.00);
+//let cheaperProducts = products.filter((product) => product.price < 4.0);
 
-console.log(cheaperProducts);
+let mmCandies1 = products.filter((product) => {
+  if (product.product.includes("M&Ms")) {
+    return true;
+  }
+  return false;
+});
+
+let mmCandies2 = products.filter((p) => p.product.includes("M&Ms"));
+console.log(mmCandies1);
+console.log(mmCandies2);
+
+let swedishFishCandies = products.filter((p) =>
+  p.product.includes("Swedish Fish")
+);
+console.log(swedishFishCandies.length != 0);
+
+let swedishFishCandy = products.find((p) =>
+  p.product.includes("Swedish FishSticks")
+);
+console.log(swedishFishCandy != null);
+
 //addOnOptions (product) //arrayValue (product)
 //filter (bring multiple things back) /find (one thing back)
-
-let mmCandies = products.filter((product)==> product.product == "M&Ms")
-console.log(mmCandies);
