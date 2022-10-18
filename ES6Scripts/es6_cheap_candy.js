@@ -17,3 +17,6 @@ products.filter((product) => product.price < 4.00);
 console.log(cheaperProducts);
 //addOnOptions (product) //arrayValue (product)
 //filter (bring multiple things back) /find (one thing back)
+
+let mmCandies = products.filter((product)==> product.product == "M&Ms")
+console.log(mmCandies);
