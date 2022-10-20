@@ -26,9 +26,16 @@ function loadWinningTicketsTable() {
   for (const ticket of winningTickets) {
     buildTicketRow(winningTicketsTblBody, ticket);
   }
+}
+function buildTicketRow(tableBody, ticket) {
+  let row = tableBody.insertRow(-1);
 
-  function buildTicketRow(tableBody, ticket) {
-    console.log(tableBody);
-    console.log(ticket);
-  }
+  let cell1 = row.insertCell(0);
+  cell1.innerText = ticket.tixNum;
+
+  let cell2 = row.insertCell(1);
+  cell2.innerText = ticket.prize;
+
+  let cell3 = row.insertCell(2);
+  cell3.innerText = ticket.expires;
 }
