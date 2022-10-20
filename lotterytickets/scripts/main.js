@@ -14,11 +14,21 @@ let winningTickets = [
   { tixNum: "8751426", expires: "2020-09-15", prize: 100000 },
 ];
 
-
 window.onload = () => {
- loadWinningTicketsTable();
+  loadWinningTicketsTable();
 };
 
 function loadWinningTicketsTable() {
-    
+  const winningTicketsTblBody = document.getElementById(
+    "winningTicketsTblBody"
+  );
+
+  for (const ticket of winningTickets) {
+    buildTicketRow(winningTicketsTblBody, ticket);
+  }
+
+  function buildTicketRow(tableBody, ticket) {
+    console.log(tableBody);
+    console.log(ticket);
+  }
 }
